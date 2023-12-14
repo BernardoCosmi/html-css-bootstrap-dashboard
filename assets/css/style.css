@@ -3,14 +3,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid red;
 }
 .navbar{
-    max-height: 18vh;
+    height: 70px;
 }
 .logo>img{
     height: 50px;
 }
 .logo-grande>img{
     height: 32px;
+}
+.sidebar-container{
+    height: calc((100%) - 70px);
+    margin-top: 70px;
+    background-color: #051e34;
+    background-image: url(../img/sidebar-bg.png);
+}
+.menu-item{
+    text-decoration: none;
+    color: white;
 }
