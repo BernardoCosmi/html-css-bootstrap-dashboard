@@ -22,11 +22,11 @@
                     <img class="d-block" src="./assets/img/mobile-logo.png" alt="Logo Boolean">
                 </div>
                 <div class="col-lg-2 d-none d-lg-block d-flex align-items-center justify-content-between logo-grande ps-2 mx-2">
-                    <img class="d-inline-block" src="./assets/img/logo.svg" alt="Logo Boolean">
+                    <img class="d-block" src="./assets/img/logo.svg" alt="Logo Boolean">
                 </div>
                 
                 <form class="col-10 col-lg-8 d-flex" role="search">
-                    <label class="border border-end-0 rounded-start bg-body-secondary d-flex align-items-center justify-content-center p-1"><svg width="25" height="25" class="DocSearch-Search-Icon" viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg></label>
+                    <label class="border border-end-0 rounded-start bg-body-secondary d-flex align-items-center justify-content-center"><svg width="25" height="25" class="DocSearch-Search-Icon" viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg></label>
                     <input class="searchbar form-control bg-body-secondary me-2 p-1" type="search" placeholder=" Prova a cercare: Lezione di Laravel" aria-label="Prova a cercare: Lezione di Laravel">  
                 </form>
 
@@ -91,7 +91,7 @@
 
         <!-- SECTION BLUE -->
     
-        <div class="row justify-content-end new-student px-3 px-md-1 pe-md-5 ps-lg-5">
+        <div class="d-flex justify-content-end new-student px-4 px-md-0 px-lg-4 px-xl-1">
             
             <div class="col-11 d-md-flex align-items-md-start justify-content-md-between py-md-3 ps-lg-5">
 
@@ -105,7 +105,7 @@
                 </div>
 
 
-                <div class="order-md-1 col-md-4">
+                <div class="order-md-1 col-md-3">
                     <div class="d-flex align-items-baseline">
                         <h2 class="me-2">Boolean</h2>
                         <span class="badge d-flex align-items-center rounded-5">Piano blaze</span>
@@ -120,88 +120,109 @@
                 </div>
                 
                 <div class="order-md-2 col-md-4">
-                  <h5>Studenti online negli ultimi 30 minuti</h5>
-                <h2>125</h2>  
+                    <h5>Studenti online negli ultimi 30 minuti</h5>
+                    <h2>125</h2>  
                 </div>
             </div>
         </div>
 
         <!-- ANCHOR OFFCANVAS -->
-          <div class="offcanvas offcanvas-end w-100 " data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
-            
+        <div class="offcanvas w-100 offcanvas-end " data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="new-student-offcanvas">Inserisci un nuovo studente</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <h5 class="offcanvas-title" id="new-student-offcanvas">Inserisci un nuovo studente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
 
-            <!-- SECTION Offcanvas FORM -->
+                <!-- SECTION Offcanvas FORM -->
             <div class="offcanvas-body col-12">
-                <form class="row g-3 needs-validation" novalidate>
 
-                    <div class="col-md-6 position-relative">
-                      <label for="validationTooltip01" class="form-label">First name</label>
-                      <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
-                      <div class="valid-tooltip">
-                        Looks good!
+                <form class="row g-3 fw-medium">
+
+                    <!-- NOME -->
+                    <div class="col-6">
+                      <label for="validationDefault01" class="form-label ">Nome</label>
+                      <input type="text" class="form-control" id="validationDefault01" value="" required>
+                    </div>
+
+                    <!-- COGNOME -->
+                    <div class="col-6">
+                      <label for="validationDefault02" class="form-label ">Cognome</label>
+                      <input type="text" class="form-control" id="validationDefault02" value="" required>
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="col-6">
+                      <label for="validationDefaultEmail" class="form-label ">Email</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                        <input type="email" class="form-control" id="validationDefaultEmail" aria-describedby="inputGroupPrepend2" required>
                       </div>
                     </div>
 
-                    <div class="col-md-6 position-relative">
-                      <label for="validationTooltip02" class="form-label">Last name</label>
-                      <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
-                      <div class="valid-tooltip">
-                        Looks good!
-                      </div>
+                    <!-- PASSWORD -->
+                    <div class="col-6">
+                      <label for="validationDefaultPassword" class="form-label ">Password</label>
+                      <input type="password" class="form-control" id="validationDefaultPassword" required>
                     </div>
 
-                    <div class="col-md-4 position-relative">
-                      <label for="validationTooltipUsername" class="form-label">Username</label>
-                      <div class="input-group has-validation">
-                        <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-                        <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
-                        <div class="invalid-tooltip">
-                          Please choose a unique and valid username.
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6 position-relative">
-                      <label for="validationTooltip03" class="form-label">City</label>
-                      <input type="text" class="form-control" id="validationTooltip03" required>
-                      <div class="invalid-tooltip">
-                        Please provide a valid city.
-                      </div>
-                    </div>
-
-                    <div class="col-md-3 position-relative">
-                      <label for="validationTooltip04" class="form-label">State</label>
-                      <select class="form-select" id="validationTooltip04" required>
-                        <option selected disabled value="">Choose...</option>
-                        <option>...</option>
-                      </select>
-                      <div class="invalid-tooltip">
-                        Please select a valid state.
-                      </div>
-                    </div>
-
-                    <div class="col-md-3 position-relative">
-                      <label for="validationTooltip05" class="form-label">Zip</label>
-                      <input type="text" class="form-control" id="validationTooltip05" required>
-                      <div class="invalid-tooltip">
-                        Please provide a valid zip.
-                      </div>
-                    </div>
-
+                    <!-- INDIRIZZO -->
                     <div class="col-12">
-                      <button class="btn btn-primary" type="submit">Submit form</button>
+                        <label for="validationDefaultAddress" class="form-label ">Indirizzo</label>
+                        <input type="password" class="form-control" id="validationDefaultAddress" required>
+                      </div>
+
+
+                    <!-- CITTA -->
+                    <div class="col-6">
+                        <label for="validationDefaultAddress" class="form-label ">Città</label>
+                        <input type="password" class="form-control" id="validationDefaultAddress" required>
+                      </div>
+
+                    <!-- STATO -->
+                    <div class="col-4">
+                      <label for="validationDefault04" class="form-label ">Stato</label>
+                      <select class="form-select" id="validationDefault04" required>
+                        <option selected disabled value="">Scegli</option>
+                        <option>IT</option>
+                        <option>EN</option>
+                        <option>DE</option>
+                        <option>FR</option>
+                      </select>
                     </div>
-                  </form>
+
+                    <!-- CAP -->
+                    <div class="col-2">
+                      <label for="validationDefault05" class="form-label">CAP</label>
+                      <input type="text" class="form-control" id="validationDefault05" required>
+                    </div>
+
+                    <!-- FOTO -->
+                    <div class="col-12">
+                        <label for="inputGroupFile01" class="form-label">Foto</label>
+                        <input type="file" class="form-control " id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" aria-label="Upload">
+                    </div>
+
+                    <!-- FORM-CHECK -->
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                        <label class="form-check-label" for="invalidCheck2">
+                          Seleziona per proseguire
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- SUBMIT AND DELETE BUTTON -->
+                    <div class="col-12">
+                        <button class="d-inline-block btn btn-primary" type="submit" value="Send">Salva</button>
+                        <button class="d-inline-block btn btn-warning" type="reset" value="Reset">Svuota</button>
+                    </div>
+                </form>   
             </div>
-          </div>
-
-
+        </div>
 
     </div>
+    
     <!-- Bootstrap 5.3.2 script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

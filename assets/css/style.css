@@ -3,14 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
 }
-
 
 header{
     background-color: #FFFFFF;
@@ -42,9 +41,9 @@ header{
 }
 .main-container{
     position: absolute;
-    left: 0;
     right: 0;
-    top:70px;
+    left: 0;
+    top: 70px;
 }
 .new-student{
     background-color: #1b72e8;
