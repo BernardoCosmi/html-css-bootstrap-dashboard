@@ -3,7 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+header{
+    background-color: #FFFFFF;
 }
 .navbar{
     height: 70px;
@@ -14,13 +24,41 @@
 .logo-grande>img{
     height: 32px;
 }
-.sidebar-container{
+.sidebar{
     height: calc((100%) - 70px);
     margin-top: 70px;
+    width: fit-content;
     background-color: #051e34;
     background-image: url(../img/sidebar-bg.png);
 }
 .menu-item{
     text-decoration: none;
     color: white;
+}
+.searchbar{
+    border-left:none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.main-container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:70px;
+}
+.new-student{
+    background-color: #1b72e8;
+    color: white;
+}
+.plus-button:hover{
+    background-color: white;
+}
+.plus-button:hover .plus-svg{
+    filter: invert(100%);
+}
+.badge{
+    background-color: rgba(14, 85, 183, 0.7);
+}
+.side-menu-hover:hover{
+    background-color: rgb(255, 255, 255, 0.2);
 }
