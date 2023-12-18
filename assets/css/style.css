@@ -3,14 +3,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
 }
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+/*ANCHOR HEADER */
 header{
     background-color: #FFFFFF;
 }
@@ -23,6 +27,13 @@ header{
 .logo-grande>img{
     height: 32px;
 }
+.searchbar{
+    border-left:none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+/*ANCHOR SIDEBAR */
 .sidebar{
     height: calc((100%) - 70px);
     margin-top: 70px;
@@ -34,17 +45,21 @@ header{
     text-decoration: none;
     color: white;
 }
-.searchbar{
-    border-left:none;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-}
+
+/* CONTAINER CENTRALE */
 .main-container{
     position: absolute;
     right: 0;
-    left: 0;
+    left: 57px;
     top: 70px;
 }
+@media (min-width: 992px) {
+    .main-container{
+      left:143px;
+    }
+}
+
+/* SECTION BLUE */
 .new-student{
     background-color: #1b72e8;
     color: white;
@@ -60,4 +75,32 @@ header{
 }
 .side-menu-hover:hover{
     background-color: rgb(255, 255, 255, 0.2);
+}
+
+/* SECTION NEXT_CLASS */
+.table-avatar{
+    height: 1.7em;
+}
+.table-icon{
+    max-width: fit-content;
+}
+.modify:hover, .cancel:hover{
+    background-color: rgb(218, 215, 215);
+}
+.process-badge{
+    color: white;
+    background-color: #ffc107;
+}
+.failed-badge{
+    color: white;
+    background-color: #DC3444;
+}
+/* SECTION F.A.Q. */
+
+
+/* ANCHOR OFFCANVAS */
+@media (min-width: 992px) {
+    .offcanvas{
+        max-width: 600px;
+    }
 }
